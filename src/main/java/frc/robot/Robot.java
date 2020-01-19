@@ -135,9 +135,8 @@ public class Robot extends TimedRobot {
 
     if (!currentColorString.equals(colorString) && !currentColorString.equals("Unknown") && confidence > 0.95) {
       colorChanges++;
+      colorString = currentColorString;
     }
-
-    colorString = currentColorString;
 
     SmartDashboard.putNumber("Red", currentColor.red);
     SmartDashboard.putNumber("Green", currentColor.green);
